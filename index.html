@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>バーコード出席システム</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+</head>
+<body>
+  <header>
+    <h1>📋 バーコード出席システム</h1>
+    <p>課題研究用・生徒40人対応</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>📷 バーコード読み取り</h2>
+      <div id="reader"></div>
+      <p id="scanMessage">カメラを起動してバーコードを読み取ってください。</p>
+      <button id="startBtn">カメラを起動</button>
+      <button id="stopBtn" class="secondary" disabled>カメラ停止</button>
+    </section>
+
+    <section class="card result">
+      <h2>読み取り結果</h2>
+      <div id="resultBox">まだ読み取っていません</div>
+    </section>
+
+    <section class="card">
+      <div class="title-row">
+        <h2>📅 本日の出席一覧</h2>
+        <button id="csvBtn">CSV保存</button>
+      </div>
+      <div class="stats">
+        <span>出席 <b id="presentCount">0</b></span>
+        <span>遅刻 <b id="lateCount">0</b></span>
+        <span>欠席 <b id="absentCount">40</b></span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>番号</th><th>名前</th><th>時刻</th><th>状態</th></tr>
+          </thead>
+          <tbody id="attendanceBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>⚙️ データ操作</h2>
+      <button id="resetBtn" class="danger">今日の出席記録をリセット</button>
+      <p class="note">※ データはこの端末のブラウザ（localStorage）に保存されます。</p>
+    </section>
+  </main>
+
+  <footer>課題研究「バーコード出席システム」</footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Noto Sans JP", sans-serif;
+  background: #f2f5f8;
+  color: #222;
+}
+
+header {
+  background: #1f4e79;
+  color: white;
+  text-align: center;
+  padding: 22px 10px;
+}
+
+header h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+}
+
+header p {
+  margin: 0;
+}
+
+main {
+  width: min(1000px, 94%);
+  margin: 20px auto;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+#reader {
+  width: min(500px, 100%);
+  margin: 0 auto 12px;
+}
+
+#scanMessage {
+  text-align: center;
+  font-weight: bold;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin: 4px;
+  background: #1f4e79;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:hover {
+  opacity: .9;
+}
+
+button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.secondary {
+  background: #777;
+}
+
+.danger {
+  background: #c62828;
+}
+
+#csvBtn {
+  background: #2e7d32;
+}
+
+.result {
+  text-align: center;
+}
+
+#resultBox {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 18px;
+  font-size: 18px;
+  min-height: 60px;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.stats {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.stats span {
+  background: #eef3f8;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 11px 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background: #e8eef5;
+}
+
+.present {
+  color: #1b5e20;
+  font-weight: bold;
+}
+
+.late {
+  color: #e65100;
+  font-weight: bold;
+}
+
+.absent {
+  color: #b71c1c;
+  font-weight: bold;
+}
+
+.note {
+  color: #666;
+  font-size: 13px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  button {
+    width: 100%;
+    margin: 4px 0;
+  }
+
+  .title-row {
+    display: block;
+  }
+
+  th, td {
+    font-size: 13px;
+  }
+}
